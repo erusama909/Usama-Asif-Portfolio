@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Usama Asif Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+<style>
+/* Custom Styles */
+#typing-animation {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: #ffffff;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end) infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+.publication-item {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.project-item {
+  margin-bottom: 30px;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 5px;
+}
+
+.technical-skills .skills-list,
+.research-interests .interests-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.technical-skills .skill-badge,
+.research-interests .interest-badge {
+  background-color: #f0f0f0;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.contact-info .box {
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+.contact-info .box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Compact layout adjustments */
+.section-heading {
+  margin-bottom: 2rem;
+}
+
+.experience-item, .education-item {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+/* Remove unnecessary whitespace */
+.ftco-section {
+  padding: 4rem 0;
+}
+
+.ftco-no-pb {
+  padding-bottom: 0;
+}
+
+/* Circular profile image */
+.profile-image {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #fff;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  margin: 0 auto;
+  display: block;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Home section styling */
+.hero {
+  padding: 100px 0;
+  background-color: #000;
+  color: #fff;
+}
+
+.home-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.home-text {
+  padding: 30px;
+  max-width: 600px;
+}
+
+.home-image {
+  margin: 30px;
+}
+
+.home-text h1, 
+.home-text h2,
+.home-text .subheading {
+  color: #fff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .home-content {
+    flex-direction: column;
+  }
+  .profile-image {
+    width: 200px;
+    height: 200px;
+  }
+}
+</style>
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+  
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Usama Asif</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav">
+        <span class="oi oi-menu"></span> Menu
+      </button>
+      <div class="collapse navbar-collapse" id="ftco-nav">
+        <ul class="navbar-nav nav ml-auto">
+          <li class="nav-item"><a href="#home-section" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="#about-section" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="#publications-section" class="nav-link">Publications</a></li>
+          <li class="nav-item"><a href="#experience-section" class="nav-link">Experience</a></li>
+          <li class="nav-item"><a href="#project-section" class="nav-link">Projects</a></li>
+          <li class="nav-item"><a href="#education-section" class="nav-link">Education</a></li>
+          <li class="nav-item"><a href="#contact-section" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home-section" class="hero">
+    <div class="container">
+      <div class="home-content">
+        <div class="home-image">
+          <img src="images/DP.jpg" class="profile-image" alt="Usama Asif">
+        </div>
+        <div class="home-text">
+          <span class="subheading">Hello!</span>
+          <h1 class="mb-4 mt-3">I'm <span>Usama Asif</span></h1>
+          <span id="typing-animation"></span>
+          <script>
+            const typingAnimationElement = document.getElementById('typing-animation');
+            const typingTexts = ['PhD Scholar', 'Civil Engineer'];
+            function playTypingAnimation(text) {
+              for (let i = 0; i < text.length; i++) {
+                setTimeout(() => typingAnimationElement.textContent += text[i], i * 200);
+              }
+              setTimeout(() => {
+                typingAnimationElement.textContent = '';
+                playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+              }, text.length * 200 + 1000);
+            }
+            playTypingAnimation(typingTexts[0]);
+          </script>
+          <h2>Graduate Research Assistant</h2>
+          <p><a href="https://scholar.google.com/citations?user=I5SyEMMAAAAJ" class="btn btn-primary py-3 px-4">Research Profile</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="ftco-about img ftco-section" id="about-section">
+    <div class="container">
+      <div class="row d-flex">
+        <div class="col-md-12 heading-section ftco-animate">
+          <h1 class="big">About</h1>
+          <h2 class="mb-4">About Me</h2>
+          <p>PhD student and researcher with over three years of experience in sustainable construction materials, machine learning and life cycle Assessment focusing on the development of eco-friendly solutions and AI-driven methods to enhance infrastructure performance. Currently engaged in monitoring and analyzing geohazards using advanced sensing technologies and AI/ML techniques, aiming to support climate-resilient and sustainable engineering solutions.</p>
+          
+          <div class="research-interests mt-4">
+            <h3>Research Interests</h3>
+            <div class="interests-list">
+              <span class="interest-badge">Sustainable Construction Materials</span>
+              <span class="interest-badge">Machine Learning</span>
+              <span class="interest-badge">Geohazard Monitoring</span>
+              <span class="interest-badge">Computational Modeling</span>
+              <span class="interest-badge">Concrete Optimization</span>
+              <span class="interest-badge">AI in Civil Engineering</span>
+            </div>
+          </div>
+
+          <div class="technical-skills mt-4">
+            <h3>Technical Proficiencies</h3>
+            <div class="skills-list">
+              <span class="skill-badge">SimaPro</span>
+              <span class="skill-badge">GIS</span>
+              <span class="skill-badge">Python</span>
+              <span class="skill-badge">GeoStudio</span>
+              <span class="skill-badge">COMSOL</span>
+              <span class="skill-badge">AutoCAD</span>
+              <span class="skill-badge">Revit</span>
+              <span class="skill-badge">MATLAB</span>
+              <span class="skill-badge">GeneXpro</span>
+              <span class="skill-badge">Mathematica</span>
+              <span class="skill-badge">Origin Pro</span>
+              <span class="skill-badge">ETABS</span>
+              <span class="skill-badge">Abaqus</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Publications Section -->
+  <section class="ftco-section" id="publications-section">
+    <div class="container">
+      <div class="row justify-content-center mb-5 pb-5">
+        <div class="col-md-7 heading-section text-center ftco-animate">
+          <h1 class="big big-2">Publications</h1>
+          <h2 class="mb-4">Publications</h2>
+          <p>Selected publications in sustainable construction materials, LCA and AI.</p>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-md-12 ftco-animate">
+          <div class="publication-item">
+            <h3 class="publication-title">Interpretive predictive modeling of cement-based composites</h3>
+            <p class="publication-authors">Asif, U., & Memon, S. A. (2025)</p>
+            <p class="publication-journal">Construction and Building Materials, 473, 140924</p>
+            <a href="#" class="btn btn-sm btn-primary">View Publication</a>
+          </div>
+          
+          <div class="publication-item">
+            <h3 class="publication-title">Optimizing Plastic Waste in Paver Blocks</h3>
+            <p class="publication-authors">Asif, U., & Javed, M. F. (2024)</p>
+            <p class="publication-journal">Journal of Cleaner Production</p>
+            <a href="#" class="btn btn-sm btn-primary">View Publication</a>
+          </div>
+          
+          <div class="publication-item">
+            <h3 class="publication-title">Predicting Mechanical Properties of Plastic Concrete</h3>
+            <p class="publication-authors">Asif, U., et al. (2024)</p>
+            <p class="publication-journal">Case Studies in Construction Materials</p>
+            <a href="#" class="btn btn-sm btn-primary">View Publication</a>
+          </div>
+          
+          <div class="text-center mt-5">
+            <a href="https://scholar.google.com/citations?user=I5SyEMMAAAAJ" class="btn btn-primary">View All Publications</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section class="ftco-section ftco-no-pb" id="experience-section">
+    <div class="container">
+      <div class="row justify-content-center pb-5">
+        <div class="col-md-10 heading-section text-center ftco-animate">
+          <h1 class="big big-2">Experience</h1>
+          <h2 class="mb-4">Professional Experience</h2>
+          <p>PhD researcher with experience in sustainable construction materials and machine learning applications in civil engineering.</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="resume-wrap ftco-animate">
+            <span class="date">2025-Present</span>
+            <h2>Graduate Research Assistant</h2>
+            <span class="position">University of Maryland</span>
+            <p class="mt-4">
+              <ul>
+                <li>Focusing on monitoring of geohazards using advanced sensing technologies and AI/ML techniques</li>
+                <li>Developing predictive models for infrastructure resilience</li>
+              </ul>
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="resume-wrap ftco-animate">
+            <span class="date">Fall 2024</span>
+            <h2>Visiting Lecturer</h2>
+            <span class="position">COMSATS University Islamabad</span>
+            <p class="mt-4">
+              <ul>
+                <li>Taught "Strength of Materials" course covering stress, strain, and mechanical behavior</li>
+                <!-- <li>Instructed two sections with applications in structural design</li> -->
+              </ul>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="resume-wrap ftco-animate">
+            <span class="date">2022-2024</span>
+            <h2>Research Assistant</h2>
+            <span class="position">Nazarbayev University</span>
+            <p class="mt-4">
+              <ul>
+                <li>Developed machine learning models for concrete optimization</li>
+                <li>Conducted experimental investigations on SCMs</li>
+              </ul>
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="resume-wrap ftco-animate">
+            <span class="date">2021-2022</span>
+            <h2>Research Assistant</h2>
+            <span class="position">COMSATS University Islamabad</span>
+            <p class="mt-4">
+              <ul>
+                <li>Investigated incorporation of solid waste products in concrete</li>
+                <li>Conducted Life Cycle Assessment and cost analysis</li>
+              </ul>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="resume-wrap ftco-animate">
+            <span class="date">2021</span>
+            <h2>Trainee Site Engineer</h2>
+            <span class="position">Bahria Town Karachi</span>
+            <p class="mt-4">
+              <ul>
+                <li>Interpreted architectural and structural drawings</li>
+                <li>Prepared bar bending schedules and supervised construction</li>
+              </ul>
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="resume-wrap ftco-animate">
+            <span class="date">2021</span>
+            <h2>Trainee Site Engineer</h2>
+            <span class="position">AbulQasim Builders</span>
+            <p class="mt-4">
+              <ul>
+                <li>Supervised construction sites and implemented drawings</li>
+                <li>Estimated quantities and costs of materials</li>
+              </ul>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="ftco-section" id="project-section">
+    <div class="container">
+      <div class="row justify-content-center mb-5 pb-5">
+        <div class="col-md-7 heading-section text-center ftco-animate">
+          <h1 class="big big-2">Projects</h1>
+          <h2 class="mb-4">Research Projects</h2>
+          <p>Research projects in sustainable construction materials and computational modeling.</p>
+        </div>
+      </div>
+      <div class="row d-flex">
+        <div class="col-md-4 d-flex ftco-animate">
+          <div class="blog-entry justify-content-end">
+            <a href="#" class="block-20 zoom-effect" style="background-image: url('images/P1.png');"></a>
+            <div class="text mt-3 float-right d-block">
+              <h3 class="heading"><a href="#">Master's Thesis</a></h3>
+              <p>Integration of experimental and computational techniques for green concrete.</p>
+              <a href="https://doi.org/10.1016/j.conbuildmat.2025.140924" class="btn btn-sm btn-primary">View Publication</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 d-flex ftco-animate">
+          <div class="blog-entry justify-content-end">
+            <a href="#" class="block-20 zoom-effect" style="background-image: url('images/P2.png');"></a>
+            <div class="text mt-3 float-right d-block">
+              <h3 class="heading"><a href="#">Bachelor's Thesis</a></h3>
+              <p>Strengthening Plastic-Sand Paver Blocks with additives.</p>
+              <a href="https://doi.org/10.1515/rams-2024-0051" class="btn btn-sm btn-primary">View Publication</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 d-flex ftco-animate">
+          <div class="blog-entry">
+            <a href="#" class="block-20 zoom-effect" style="background-image: url('images/P3.png');"></a>
+            <div class="text mt-3 float-right d-block">
+              <h3 class="heading"><a href="#">FEM-based Simulations</a></h3>
+              <p>Structural behavior analysis of concrete materials.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row d-flex justify-content-center mt-4">  
+        <div class="col-md-4 d-flex ftco-animate">
+          <div class="blog-entry justify-content-end">
+            <a href="#" class="block-20 zoom-effect" style="background-image: url('images/FEM.jpg');"></a>
+            <div class="text mt-3 float-right d-block">
+              <h3 class="heading"><a href="#">Structural Design</a></h3>
+              <p>Multistory building design using ETABS and SAFE.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 d-flex ftco-animate">
+          <div class="blog-entry justify-content-end">
+            <a href="#" class="block-20 zoom-effect" style="background-image: url('images/P5.png');"></a>
+            <div class="text mt-3 float-right d-block">
+              <h3 class="heading"><a href="#">Slope Stability</a></h3>
+              <p>Slope stability and seepage analysis.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section class="ftco-section" id="education-section">
+    <div class="container">
+      <div class="row justify-content-center mb-5 pb-5">
+        <div class="col-md-7 heading-section text-center ftco-animate">
+          <h1 class="big big-2">Education</h1>
+          <h2 class="mb-4">Academic Background</h2>
+          <p>My educational journey in civil engineering and research.</p>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-md-6">
+          <div class="resume-wrap ftco-animate">
+            <span class="date">2025-Present</span>
+            <h2>PhD in Civil Engineering</h2>
+            <span class="position">University of Maryland</span>
+            <p class="mt-4">Research focus on geohazard monitoring and sustainable materials</p>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="resume-wrap ftco-animate">
+            <span class="date">2022-2024</span>
+            <h2>MS Civil Engineering</h2>
+            <span class="position">Nazarbayev University</span>
+            <p class="mt-4">Graduated with distinction | Dean's List</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-md-6">
+          <div class="resume-wrap ftco-animate">
+            <span class="date">2018-2022</span>
+            <h2>BS Civil Engineering</h2>
+            <span class="position">COMSATS University Islamabad</span>
+            <p class="mt-4">Campus Gold Medalist | Departmental Gold Medalist</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+    <div class="container">
+      <div class="row justify-content-center mb-5 pb-3">
+        <div class="col-md-7 heading-section text-center ftco-animate">
+          <h1 class="big big-2">Contact</h1>
+          <h2 class="mb-4">Contact Me</h2>
+          <p>Feel free to reach out for research collaborations or discussions.</p>
+        </div>
+      </div>
+
+      <div class="row d-flex contact-info mb-5">
+        <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          <div class="align-self-stretch box p-4 text-center">
+            <div class="icon d-flex align-items-center justify-content-center">
+              <span class="icon-map-signs"></span>
+            </div>
+            <h3 class="mb-4">Address</h3>
+            <p>College Park, Maryland, USA</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          <div class="align-self-stretch box p-4 text-center">
+            <div class="icon d-flex align-items-center justify-content-center">
+              <span class="icon-phone2"></span>
+            </div>
+            <h3 class="mb-4">Contact Number</h3>
+            <p><a href="tel:+19293409091">+1 (929) 340-9091</a></p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          <div class="align-self-stretch box p-4 text-center">
+            <div class="icon d-flex align-items-center justify-content-center">
+              <span class="icon-paper-plane"></span>
+            </div>
+            <h3 class="mb-4">Email Address</h3>
+            <p><a href="mailto:uasif@umd.edu">uasif@umd.edu</a></p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          <div class="align-self-stretch box p-4 text-center">
+            <div class="icon d-flex align-items-center justify-content-center">
+              <span class="icon-globe"></span>
+            </div>
+            <h3 class="mb-4">Google Scholar</h3>
+            <p><a href="https://scholar.google.com/citations?user=I5SyEMMAAAAJ">Research Profile</a></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-md-12 text-center ftco-animate">
+          <ul class="ftco-footer-social list-unstyled d-flex justify-content-center mb-0">
+            <li class="ftco-animate"><a href="https://www.linkedin.com/in/usama-asif-990138251/"><span class="icon-linkedin"></span></a></li>
+            <li class="ftco-animate"><a href="https://www.facebook.com/share/16ec8jKVav/?mibextid=wwXIfr"><span class="icon-facebook"></span></a></li>
+            <li class="ftco-animate"><a href="https://www.instagram.com/usama_asif?igsh=MW53ZXZtNHZjd3phdw%3D%3D&utm_source=qr"><span class="icon-instagram"></span></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="ftco-footer ftco-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <p>
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Usama Asif
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+  <!-- Scripts -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <script src="js/main.js"></script>
+  
+  <script>
+    // Fix for navigation scrolling
+    $(document).ready(function(){
+      // Add smooth scrolling to all links
+      $("a").on('click', function(event) {
+        if (this.hash !== "") {
+          event.preventDefault();
+          var hash = this.hash;
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 800, function(){
+            window.location.hash = hash;
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
